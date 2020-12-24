@@ -1,5 +1,5 @@
 {
-  "name": "stripe",
+  "name": "stripe-gateway",
   "version": "1.0.0",
   "description": "Stripe payment gateway",
   "main": "server.js",
@@ -13,7 +13,9 @@
   "author": "Techkanna",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "stripe": "^8.129.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
