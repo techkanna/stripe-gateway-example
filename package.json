@@ -13,6 +13,7 @@
   "author": "Techkanna",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "stripe": "^8.129.0"

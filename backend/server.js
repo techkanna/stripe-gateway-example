@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.json())
 
-const stripe = new Stripe('sk_test_51I18f9FYQ9ouv5EjrtEHHc4A1wK3kJVttoWAcWhsR48wL4YDZYQ9VaNInDBUXjTtfqqefkujp3lrP3e8uoZ9890m0081XxK2Gb')
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 app.post('/api/charge', asyncHandler(async (req, res) => {
 
@@ -29,6 +29,10 @@ app.post('/api/charge', asyncHandler(async (req, res) => {
     console.log(error);
   }
 }))
+
+app.get('/api/config/stripe', (req, res) =>
+  res.send(process.env.STRIPE_PUBLIC_KEY)
+)
 
 app.use('/', (req, res) => {
   res.send('api running...')

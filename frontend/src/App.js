@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
 import {
   CardElement,
@@ -46,9 +46,7 @@ const CheckoutForm = () => {
   )
 }
 
-const stripePromise = loadStripe(
-  'pk_test_51I18f9FYQ9ouv5EjYe1GUwJ50OoEohfN6qev6gHDWOlE75v8DVf9utk7BVp1Efv0OarbunNbtnTbMKxINPKODGDe00IYQ0wTuY'
-)
+const stripePromise = loadStripe('pk_test_51I18f9FYQ9ouv5EjYe1GUwJ50OoEohfN6qev6gHDWOlE75v8DVf9utk7BVp1Efv0OarbunNbtnTbMKxINPKODGDe00IYQ0wTuY')
 
 function App() {
   return (
